@@ -1,0 +1,14 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties: {}
+    description: No configuration variables are required as the server startup
+      script is empty.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    () => ({command: '/bin/echo', args: ['Server startup script is empty.']})
